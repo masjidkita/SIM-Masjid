@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIM-Masjid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <link rel="icon" href="https://res.cloudinary.com/dp8rda8g4/image/upload/v1777300924/MTs%20Nurul%20Falah/Logo_Masjid_Random_e4b1nk.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+      height: 100vh;
+      width: 100vw;
+    }
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbytEJARY-F0M3jizAb19a8bARq9Iz_9BL4dgl69u1QL6W_ZtHC1wwRvX5N-now33OU7/exec"
+    allowfullscreen="true"
+    allow="fullscreen"
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
+    loading="lazy">
+    <p>Browser Anda tidak mendukung iframe. Silakan buka tautan berikut: 
+       <a href="https://script.google.com/macros/s/AKfycbytEJARY-F0M3jizAb19a8bARq9Iz_9BL4dgl69u1QL6W_ZtHC1wwRvX5N-now33OU7/exec" target="_blank">SIM-Masjid</a>
+    </p>
+  </iframe>
+</body>
+</html>
