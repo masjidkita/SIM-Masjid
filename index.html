@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <title>SIM-Masjid</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  <!-- Konfigurasi PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50"> <!-- Sesuaikan dengan warna tema masjid Anda -->
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dp8rda8g4/image/upload/v1777300924/MTs%20Nurul%20Falah/Logo_Masjid_Random_e4b1nk.png">
+  
   <link rel="icon" href="https://res.cloudinary.com/dp8rda8g4/image/upload/v1777300924/MTs%20Nurul%20Falah/Logo_Masjid_Random_e4b1nk.png">
+  
   <style>
     body {
       margin: 0;
@@ -35,5 +42,20 @@
        <a href="https://script.google.com/macros/s/AKfycbytEJARY-F0M3jizAb19a8bARq9Iz_9BL4dgl69u1QL6W_ZtHC1wwRvX5N-now33OU7/exec" target="_blank">SIM-Masjid</a>
     </p>
   </iframe>
+
+  <!-- Script untuk mendaftarkan Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(registration => {
+            console.log('Service Worker berhasil didaftarkan dengan scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('Pendaftaran Service Worker gagal:', error);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
