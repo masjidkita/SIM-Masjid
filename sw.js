@@ -5,7 +5,6 @@ const urlsToCache = [
   './manifest.json'
 ];
 
-// Event Install: Menyimpan aset utama ke cache
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -15,18 +14,21 @@ self.addEventListener('install', event => {
   );
 });
 
-// Event Fetch: Menyajikan data dari cache jika offline
 self.addEventListener('fetch', event => {
+  // PENTING: Hanya tangani request yang berasal dari domain website kita sendiri.
+  // Biarkan request ke script.google.com berjalan normal tanpa campur tangan Service Worker.
+  if (!event.request.url.startsWith(self.location.origin)) {
+    return; 
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Kembalikan dari cache jika ada, jika tidak lakukan request ke jaringan
         return response || fetch(event.request);
       })
   );
 });
 
-// Event Activate: Membersihkan cache lama jika ada pembaruan versi
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
