@@ -1,0 +1,21 @@
+{
+  "name": "Sistem Informasi Manajemen Masjid",
+  "short_name": "SIM-Masjid",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "description": "Aplikasi Sistem Informasi Manajemen Masjid",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dp8rda8g4/image/upload/v1777300924/MTs%20Nurul%20Falah/Logo_Masjid_Random_e4b1nk.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://res.cloudinary.com/dp8rda8g4/image/upload/v1777300924/MTs%20Nurul%20Falah/Logo_Masjid_Random_e4b1nk.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
